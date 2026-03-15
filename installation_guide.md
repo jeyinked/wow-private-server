@@ -1,4 +1,4 @@
-*****[Prerequisites:]*****
+[Prerequisites]:
 
 1) Ubuntu server 24.04 lts
 2) 8go sdram
@@ -7,7 +7,7 @@
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*****[Installation de Docker:]*****
+[Installation de Docker]:
 
 
 #Maj des pacquet
@@ -33,7 +33,7 @@ sudo usermod -aG docker {username}
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*****[Installation d"AzerothCore 3.3.5 avec le Playerbots Module Docker Setup:]*****
+[Installation d'AzerothCore 3.3.5 avec le Playerbots Module Docker Setup]:
 
 
 #Création d'un repertoire docker
@@ -71,7 +71,7 @@ sudo docker compose up -d --build
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*****[Configuration du Royaume]:*****
+[Configuration du Royaume]:
 
 #Affiche les procecus docker
 docker ps -a
@@ -94,7 +94,7 @@ docker compose restart
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*****[Ajout d'un compte]*****
+[Ajout d'un compte]:
 
 #Se connecte sur le docker ac-worldserver
 docker attach ac-worldserver
@@ -108,6 +108,5 @@ account set addon username 2
 #quitter
 Control + P + Control + Q 
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
