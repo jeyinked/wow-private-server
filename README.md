@@ -68,6 +68,16 @@ Ce guide explique comment :
 
 ---
 
+## 📚 Resources
+
+AzerothCore website  
+https://www.azerothcore.org
+
+AzerothCore GitHub  
+https://github.com/azerothcore/azerothcore-wotlk
+
+---
+
 ## Disclaimer / Avertissement
 
 This project is provided for **educational purposes only**.
