@@ -66,6 +66,7 @@ sudo vim docker-compose.yml
       # playerbots folder
       - ./modules/mod-playerbots/:/azerothcore/modules/mod-playerbots:ro
 
+#Build du docker compose
 sudo docker compose up -d --build
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
