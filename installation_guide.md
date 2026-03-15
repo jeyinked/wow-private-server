@@ -1,4 +1,4 @@
-[Prerequisites:]
+*****[Prerequisites:]*****
 
 1) Ubuntu server 24.04 lts
 2) 8go sdram
@@ -7,7 +7,7 @@
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Installation de Docker:] 
+*****[Installation de Docker:]******
 
 
 #Maj des pacquet
@@ -33,7 +33,7 @@ sudo usermod -aG docker {username}
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Installation d"AzerothCore 3.3.5 avec le Playerbots Module Docker Setup:]
+*****[Installation d"AzerothCore 3.3.5 avec le Playerbots Module Docker Setup:]*****
 
 
 #Création d'un repertoire docker
@@ -70,3 +70,44 @@ sudo vim docker-compose.yml
 sudo docker compose up -d --build
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*****[Configuration du Royaume]:******
+
+#Affiche les procecus docker
+docker ps -a
+
+#Acces au conteneur docker mysql  (Acccount: root)  (Password: password):
+docker exec -it {idcontainer}   mysql -uroot -p     
+
+#Selection de la table acore_auth
+use acore_auth
+
+#Modif dans la table acore_auth 
+DELETE FROM realmlist WHERE id=1;
+INSERT INTO realmlist (id, name, address, localAddress, localSubnetMask, port, icon, flag, timezone, allowedSecurityLevel, gamebuild)
+VALUES ('1', 'servername', 'ippublic', 'ipprivée','255.255.255.0','8085', '1', '0', '1', '0', '12340');
+
+exit
+
+#Reboot les élèments du Docker
+docker compose restart
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*****[Ajout d'un compte]*****
+
+#Se connecte sur le docker ac-worldserver
+docker attach ac-worldserver
+
+#Crée un compte
+account create username userpassword
+
+#ajout d'un compte GM
+account set addon username 2
+
+#quitter
+Control + P + Control + Q 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
